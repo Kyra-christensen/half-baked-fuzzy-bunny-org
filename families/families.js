@@ -14,9 +14,9 @@ logoutButton.addEventListener('click', () => {
     logout();
 });
 
-function displayFamilies() {
+async function displayFamilies() {
     // fetch families from supabase
-
+    
     // clear out the familiesEl
 
     for (let family of families) {
