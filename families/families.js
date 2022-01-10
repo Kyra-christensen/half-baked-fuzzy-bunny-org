@@ -43,7 +43,7 @@ async function displayFamilies() {
             bunnyEl.addEventListener('click', async() => {
                 await deleteBunny(bunny.id);
 
-                displayFamilies();
+                await displayFamilies();
             });
         // append this bunnyEl to the bunniesEl
             bunniesEl.append(bunnyEl);
@@ -56,7 +56,7 @@ async function displayFamilies() {
 }
 
 window.addEventListener('load', async() => {
-    const families = await getFamilies();
+    await getFamilies();
 
-    displayFamilies(families);
+    displayFamilies();
 });
